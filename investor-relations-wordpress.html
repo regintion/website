@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade & Development Bank - Investor Relations</title>
+    <meta name="description" content="Premium investor relations portal for Trade & Development Bank featuring financial results, ESG initiatives, and shareholder information.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js">
+    
+    <style>
+        /* CSS Variables - Premium Green Banking Theme */
+        :root {
+            --font-size: 14px;
+            --background: #0a0a0a;
+            --foreground: #ffffff;
+            --card: #141414;
+            --card-foreground: #ffffff;
+            --primary: #00a651;
+            --primary-foreground: #ffffff;
+            --secondary: #1a1a1a;
+            --secondary-foreground: #e2e8f0;
+            --muted: #1a1a1a;
+            --muted-foreground: #94a3b8;
+            --accent: #00a651;
+            --border: #2a2a2a;
+            --ring: #00a651;
+            
+            /* Green Banking Theme Colors */
+            --green-banking: #00a651;
+            --green-banking-light: #00cc66;
+            --green-banking-dark: #008a44;
+            --navy-blue: #001f3f;
+            --deep-black: #0a0a0a;
+            --card-dark: #141414;
+            --border-green: #00a651;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Premium Background System */
+        .background-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .background-base {
+            position: absolute;
+            inset: 0;
+            background: #0a0a0a;
+        }
+
+        .background-gradient {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(135deg, #0a0a0a 0%, #001f3f 25%, #0a0a0a 50%, #001f3f 75%, #0a0a0a 100%),
+                radial-gradient(circle at 25% 25%, rgba(0, 31, 63, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 166, 81, 0.2) 0%, transparent 60%),
+                radial-gradient(circle at 50% 0%, rgba(0, 31, 63, 0.3) 0%, transparent 70%);
+        }
+
+        .banking-grid {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(rgba(0, 166, 81, 0.25) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 166, 81, 0.25) 1px, transparent 1px),
+                linear-gradient(rgba(0, 31, 63, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 31, 63, 0.15) 1px, transparent 1px);
+            background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
+            animation: gridShift 60s linear infinite;
+        }
+
+        @keyframes gridShift {
+            0% { background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px; }
+            100% { background-position: 100px 100px, 100px 100px, 200px 200px, 200px 200px; }
+        }
+
+        /* Premium Eco Leaf Patterns */
+        .eco-patterns {
+            position: absolute;
+            inset: 0;
+            opacity: 0.02;
+        }
+
+        .leaf-pattern {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            clip-path: polygon(50% 0%, 85% 25%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 15% 25%);
+            border-radius: 50% 20% 50% 20%;
+            animation: leafFloat 25s ease-in-out infinite;
+        }
+
+        .leaf-pattern:nth-child(4n+1) { background: rgba(0, 166, 81, 0.3); }
+        .leaf-pattern:nth-child(4n+2) { background: rgba(0, 31, 63, 0.2); }
+        .leaf-pattern:nth-child(4n+3) { background: rgba(0, 138, 68, 0.25); }
+        .leaf-pattern:nth-child(4n+4) { background: rgba(0, 204, 102, 0.2); }
+
+        @keyframes leafFloat {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+                opacity: 0.2;
+            }
+            25% {
+                transform: translateY(-15px) translateX(8px) rotate(15deg) scale(1.2);
+                opacity: 0.4;
+            }
+            50% {
+                transform: translateY(-20px) translateX(-5px) rotate(-10deg) scale(0.8);
+                opacity: 0.15;
+            }
+            75% {
+                transform: translateY(-10px) translateX(-8px) rotate(20deg) scale(1);
+                opacity: 0.2;
+            }
+        }
+
+        /* Atmospheric Shapes */
+        .atmospheric-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            animation: atmosphericFloat 35s ease-in-out infinite;
+        }
+
+        .atmospheric-shape-1 {
+            top: -240px;
+            right: -240px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 31, 63, 0.4) 0%, rgba(0, 166, 81, 0.2) 30%, rgba(0, 31, 63, 0.15) 60%, transparent 80%);
+            opacity: 0.06;
+        }
+
+        .atmospheric-shape-2 {
+            bottom: -240px;
+            left: -240px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 166, 81, 0.3) 0%, rgba(0, 31, 63, 0.2) 40%, rgba(0, 138, 68, 0.15) 70%, transparent 85%);
+            opacity: 0.05;
+            animation-delay: 8s;
+        }
+
+        .atmospheric-shape-3 {
+            top: 33%;
+            right: 25%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 204, 102, 0.25) 0%, rgba(0, 31, 63, 0.15) 50%, transparent 75%);
+            opacity: 0.04;
+            animation-delay: 15s;
+        }
+
+        @keyframes atmosphericFloat {
+            0%, 100% {
+                transform: scale(1) translate(0, 0) rotate(0deg);
+            }
+            33% {
+                transform: scale(1.3) translate(40px, -30px) rotate(120deg);
+            }
+            66% {
+                transform: scale(1.1) translate(-20px, 15px) rotate(240deg);
+            }
+        }
+
+        /* Green Accent Lines */
+        .accent-line-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent 0%, rgba(0, 166, 81, 0.6) 20%, rgba(0, 204, 102, 0.8) 50%, rgba(0, 166, 81, 0.6) 80%, transparent 100%);
+            box-shadow: 0 0 20px rgba(0, 166, 81, 0.4), 0 0 40px rgba(0, 166, 81, 0.2);
+            z-index: 20;
+            animation: accentGlow 18s ease-in-out infinite;
+        }
+
+        .accent-line-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent 0%, rgba(0, 31, 63, 0.7) 30%, rgba(0, 166, 81, 0.8) 50%, rgba(0, 31, 63, 0.7) 70%, transparent 100%);
+            box-shadow: 0 0 25px rgba(0, 166, 81, 0.4), 0 0 50px rgba(0, 31, 63, 0.2);
+            z-index: 20;
+            animation: accentGlow 22s ease-in-out infinite;
+            animation-delay: 6s;
+        }
+
+        @keyframes accentGlow {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scaleX(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scaleX(1.05);
+            }
+        }
+
+        /* Bank Logo Watermark */
+        .bank-logo-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            opacity: 0.08;
+            mix-blend-mode: screen;
+            filter: brightness(1.2) contrast(1.1) saturate(1.2);
+            animation: logoFloat 18s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
+                opacity: 0.08;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.02) rotate(0.8deg);
+                opacity: 0.1;
+            }
+        }
+
+        /* Main Content */
+        .main-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Navigation Styles */
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: all 0.5s ease;
+            background: rgba(0, 31, 63, 0.15);
+            backdrop-filter: blur(20px);
+        }
+
+        .navigation.scrolled {
+            background: rgba(10, 10, 10, 0.92);
+            border-bottom: 1px solid rgba(0, 166, 81, 0.2);
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 166, 81, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #00a651, #008a44, #00cc66);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 166, 81, 0.4), 0 0 30px rgba(0, 166, 81, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+            animation: logoShine 4s ease-in-out infinite;
+        }
+
+        @keyframes logoShine {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 166, 81, 0.3);
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #00cc66;
+            text-shadow: 0 1px 5px rgba(0, 204, 102, 0.4);
+        }
+
+        .nav-menu {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        @media (min-width: 1280px) {
+            .nav-menu {
+                display: flex;
+            }
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #d1d5db;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            color: white;
+            background: linear-gradient(135deg, rgba(0, 166, 81, 0.2), rgba(0, 31, 63, 0.3));
+            transform: translateY(-2px);
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00a651, #00cc66, #00a651);
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-item.active::after {
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(0, 166, 81, 0.6), 0 0 20px rgba(0, 166, 81, 0.3);
+            animation: underlineGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes underlineGlow {
+            0%, 100% { opacity: 0.7; transform: scaleX(0.8); }
+            50% { opacity: 1; transform: scaleX(1); }
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(0, 166, 81, 0.2);
+            color: #d1d5db;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 1280px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 166, 81, 0.3);
+            background: linear-gradient(135deg, rgba(0, 166, 81, 0.2), rgba(0, 31, 63, 0.3));
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            padding-top: 80px;
+            padding-bottom: 6rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-headline {
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 166, 81, 0.2);
+            animation: titleGlow 4s ease-in-out infinite;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 5rem;
+            }
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 166, 81, 0.2);
+            }
+            50% {
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 166, 81, 0.3);
+            }
+        }
+
+        .hero-title-accent {
+            background: linear-gradient(135deg, #00a651, #00cc66, #00a651);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            max-width: 4xl;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-subtitle {
+                font-size: 1.875rem;
+            }
+        }
+
+        .hero-subtitle-accent {
+            color: #00cc66;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            margin-top: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .metric-card {
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid rgba(0, 166, 81, 0.3);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 166, 81, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px) scale(1.05);
+            border-color: rgba(0, 166, 81, 0.5);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 166, 81, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 166, 81, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            filter: blur(20px);
+        }
+
+        .metric-card:hover::before {
+            opacity: 1;
+        }
+
+        .metric-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #00a651, #008a44);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 25px rgba(0, 166, 81, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .metric-value {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .metric-value {
+                font-size: 2.25rem;
+            }
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #94a3b8;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .btn-primary {
+            position: relative;
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #00a651, #008a44, #00cc66);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 166, 81, 0.4), 0 0 40px rgba(0, 166, 81, 0.2);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.5s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 166, 81, 0.6), 0 0 60px rgba(0, 166, 81, 0.3);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%) skewX(-12deg);
+            transition: transform 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            transform: translateX(200%) skewX(-12deg);
+        }
+
+        .btn-secondary {
+            position: relative;
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 1rem;
+            background: rgba(20, 20, 20, 0.8);
+            color: #00cc66;
+            border: 2px solid #00a651;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.5s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: rgba(0, 166, 81, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 166, 81, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 166, 81, 0.2);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 4rem;
+            }
+        }
+
+        .section-title-accent {
+            display: block;
+            background: linear-gradient(135deg, #00a651, #00cc66);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 4xl;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 768px) {
+            .section-subtitle {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Card Styles */
+        .card-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .glassmorphism-card {
+            position: relative;
+            border-radius: 1.5rem;
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid rgba(0, 166, 81, 0.2);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 166, 81, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .glassmorphism-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 166, 81, 0.4);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 166, 81, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .glassmorphism-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 166, 81, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            filter: blur(20px);
+        }
+
+        .glassmorphism-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .glassmorphism-card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #00cc66;
+            background: rgba(0, 166, 81, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 166, 81, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .card-description {
+            font-size: 0.875rem;
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            justify-content: between;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            gap: 1rem;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #00a651;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .card-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Quarterly Earnings Grid */
+        .earnings-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .earnings-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid rgba(0, 166, 81, 0.2);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 166, 81, 0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .earnings-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 166, 81, 0.4);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 166, 81, 0.15);
+        }
+
+        .earnings-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #00a651, #008a44);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 166, 81, 0.3);
+            flex-shrink: 0;
+        }
+
+        .earnings-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .earnings-content p {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            padding: 4rem 0 2rem;
+            background: rgba(10, 10, 10, 0.95);
+            border-top: 1px solid rgba(0, 166, 81, 0.2);
+            overflow: hidden;
+        }
+
+        .footer-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            opacity: 0.03;
+            mix-blend-mode: screen;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #00cc66;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 166, 81, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .space-y-20 > * + * {
+            margin-top: 5rem;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .logo-text {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Container -->
+    <div class="background-container">
+        <!-- Base Background -->
+        <div class="background-base"></div>
+        
+        <!-- Gradient Overlay -->
+        <div class="background-gradient"></div>
+        
+        <!-- Banking Grid -->
+        <div class="banking-grid"></div>
+        
+        <!-- Eco Patterns -->
+        <div class="eco-patterns">
+            <div class="leaf-pattern" style="top: 10%; left: 8%;"></div>
+            <div class="leaf-pattern" style="top: 16%; left: 14.2%;"></div>
+            <div class="leaf-pattern" style="top: 22%; left: 20.4%;"></div>
+            <div class="leaf-pattern" style="top: 28%; left: 26.6%;"></div>
+            <div class="leaf-pattern" style="top: 34%; left: 32.8%;"></div>
+            <div class="leaf-pattern" style="top: 40%; left: 39%;"></div>
+            <div class="leaf-pattern" style="top: 46%; left: 45.2%;"></div>
+            <div class="leaf-pattern" style="top: 52%; left: 51.4%;"></div>
+            <div class="leaf-pattern" style="top: 58%; left: 57.6%;"></div>
+            <div class="leaf-pattern" style="top: 64%; left: 63.8%;"></div>
+            <div class="leaf-pattern" style="top: 70%; left: 70%;"></div>
+            <div class="leaf-pattern" style="top: 76%; left: 76.2%;"></div>
+            <div class="leaf-pattern" style="top: 82%; left: 82.4%;"></div>
+            <div class="leaf-pattern" style="top: 88%; left: 88.6%;"></div>
+            <div class="leaf-pattern" style="top: 94%; left: 94.8%;"></div>
+        </div>
+        
+        <!-- Atmospheric Shapes -->
+        <div class="atmospheric-shape atmospheric-shape-1"></div>
+        <div class="atmospheric-shape atmospheric-shape-2"></div>
+        <div class="atmospheric-shape atmospheric-shape-3"></div>
+        
+        <!-- Green Accent Lines -->
+        <div class="accent-line-top"></div>
+        <div class="accent-line-bottom"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navigation" id="navigation">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M3 21h18"/>
+                            <path d="M5 21V7l8-4v18"/>
+                            <path d="M19 21V11l-6-4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Trade & Development Bank</h1>
+                        <p>Investor Relations Portal</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="nav-menu">
+                    <a href="#investor-relations" class="nav-item active" data-section="investor-relations">Investor Relations</a>
+                    <a href="#quarterly-earnings" class="nav-item" data-section="quarterly-earnings">Quarterly Earnings</a>
+                    <a href="#press-releases" class="nav-item" data-section="press-releases">Press Releases</a>
+                    <a href="#events-presentations" class="nav-item" data-section="events-presentations">Event & Presentations</a>
+                    <a href="#investor-day" class="nav-item" data-section="investor-day">Investor Day</a>
+                    <a href="#sfc-filings" class="nav-item" data-section="sfc-filings">SFC Filings & Other Disclosures</a>
+                    <a href="#annual-reports" class="nav-item" data-section="annual-reports">Annual Report & Proxy</a>
+                    <a href="#fixed-income" class="nav-item" data-section="fixed-income">Fixed Income</a>
+                    <a href="#shareholder-info" class="nav-item" data-section="shareholder-info">Shareholder Info</a>
+                    <a href="#esg-info" class="nav-item" data-section="esg-info">ESG Info</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="investor-relations" class="hero-section">
+            <!-- Bank Logo Watermark -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='%2300a651' stroke-width='4' opacity='0.3'/%3E%3Cpath d='M100 40 L140 80 L120 80 L120 120 L80 120 L80 80 L60 80 Z' fill='%2300a651' opacity='0.4'/%3E%3Cpath d='M70 130 Q100 150 130 130' stroke='%2300a651' stroke-width='3' fill='none' opacity='0.3'/%3E%3C/svg%3E" alt="Bank Logo" class="bank-logo-watermark">
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <!-- Hero Headline -->
+                    <div class="hero-headline fade-in">
+                        <h1 class="hero-title">
+                            <span>Investor</span><br>
+                            <span class="hero-title-accent">Relations</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Building sustainable growth through <span class="hero-subtitle-accent">transparent communication</span>, 
+                            strategic partnerships, and responsible banking practices that 
+                            drive value for our stakeholders and communities.
+                        </p>
+                    </div>
+
+                    <!-- Metrics Grid -->
+                    <div class="metrics-grid fade-in">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">25+</div>
+                            <div class="metric-label">Years of Excellence</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">1M+</div>
+                            <div class="metric-label">Customers Served</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M2 12h20"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">50+</div>
+                            <div class="metric-label">Global Branches</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M8 6l4-4 4 4"/>
+                                    <path d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22"/>
+                                    <path d="M20 22l-6.828-6.828A4 4 0 0 1 12 12.3V2"/>
+                                </svg>
+                            </div>
+                            <div class="metric-value">AAA</div>
+                            <div class="metric-label">Credit Rating</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="cta-buttons fade-in">
+                        <a href="#annual-reports" class="btn-primary">
+                            <span>View Latest Reports</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#newsletter" class="btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            <span>Annual Reports</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Container -->
+        <div class="section-container space-y-20">
+            <!-- TDB News & Updates -->
+            <section id="tdb-news" class="section">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">
+                        TDB News & 
+                        <span class="section-title-accent">Updates</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Stay informed with the latest developments, financial results, and strategic initiatives 
+                        shaping the future of sustainable banking.
+                    </p>
+                </div>
+
+                <!-- Featured Article -->
+                <div class="glassmorphism-card fade-in" style="margin-bottom: 4rem;">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="position: relative;">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop&crop=center" alt="Featured News" class="card-image" style="height: 20rem;">
+                            <div class="card-category" style="position: absolute; top: 1.5rem; left: 1.5rem;">Financial Results</div>
+                        </div>
+                        <div class="card-content" style="padding: 2rem;">
+                            <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.875rem; color: #94a3b8;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a651" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Dec 15, 2024
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a651" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    4 min read
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a651" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    2.1k views
+                                </div>
+                            </div>
+                            <h3 class="card-title" style="font-size: 1.875rem; margin-bottom: 1rem;">Q4 2024 Financial Results Exceed Expectations</h3>
+                            <p class="card-description" style="font-size: 1.125rem; margin-bottom: 2rem;">Trade & Development Bank reports record-breaking quarterly performance with 18% growth in net income and expanded market presence across emerging economies.</p>
+                            <a href="#" class="btn-primary">
+                                Read Full Story
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Grid -->
+                <div class="card-grid fade-in">
+                    <article class="glassmorphism-card">
+                        <div style="position: relative;">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&crop=center" alt="ESG Initiative" class="card-image">
+                            <div class="card-category" style="position: absolute; top: 1rem; left: 1rem;">ESG & Sustainability</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta" style="margin-bottom: 1rem;">
+                                <span>Dec 10, 2024</span>
+                                <span>6 min read</span>
+                                <span>1.8k views</span>
+                            </div>
+                            <h3 class="card-title">ESG Initiative: $500M Green Bond Issuance</h3>
+                            <p class="card-description">New sustainability-focused investment vehicle supports renewable energy projects and climate-resilient infrastructure development.</p>
+                            <a href="#" class="card-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glassmorphism-card">
+                        <div style="position: relative;">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop&crop=center" alt="Partnership" class="card-image">
+                            <div class="card-category" style="position: absolute; top: 1rem; left: 1rem;">Partnerships</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta" style="margin-bottom: 1rem;">
+                                <span>Dec 8, 2024</span>
+                                <span>5 min read</span>
+                                <span>1.5k views</span>
+                            </div>
+                            <h3 class="card-title">Strategic Partnership with Asian Development Bank</h3>
+                            <p class="card-description">Multi-billion dollar collaboration enhances regional infrastructure financing capabilities and strengthens market position.</p>
+                            <a href="#" class="card-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="glassmorphism-card">
+                        <div style="position: relative;">
+                            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop&crop=center" alt="Digital Banking" class="card-image">
+                            <div class="card-category" style="position: absolute; top: 1rem; left: 1rem;">Technology</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta" style="margin-bottom: 1rem;">
+                                <span>Dec 5, 2024</span>
+                                <span>3 min read</span>
+                                <span>2.5k views</span>
+                            </div>
+                            <h3 class="card-title">Digital Banking Platform Reaches 1M Users</h3>
+                            <p class="card-description">Revolutionary fintech solution transforms customer experience with AI-powered advisory services and seamless payments.</p>
+                            <a href="#" class="card-link">
+                                Read More
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- View All Button -->
+                <div style="text-align: center; margin-top: 4rem;">
+                    <button class="btn-secondary">View All News & Updates</button>
+                </div>
+            </section>
+
+            <!-- Quarterly Earnings Section -->
+            <section id="quarterly-earnings" class="section">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">
+                        2025 Quarterly 
+                        <span class="section-title-accent">Earnings</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Access comprehensive financial reports, presentations, and supplementary materials 
+                        for our quarterly earnings releases.
+                    </p>
+                </div>
+
+                <div class="earnings-grid fade-in">
+                    <a href="#" class="earnings-item">
+                        <div class="earnings-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <div class="earnings-content">
+                            <h3>Earnings Press Release</h3>
+                            <p>Official quarterly earnings announcement</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="earnings-item">
+                        <div class="earnings-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="earnings-content">
+                            <h3>Earnings Presentation</h3>
+                            <p>Detailed financial performance slides</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="earnings-item">
+                        <div class="earnings-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="12" y1="18" x2="12" y2="12"/>
+                                <line x1="9" y1="15" x2="15" y2="15"/>
+                            </svg>
+                        </div>
+                        <div class="earnings-content">
+                            <h3>Earnings Supplement (PDF)</h3>
+                            <p>Additional financial metrics and analysis</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="earnings-item">
+                        <div class="earnings-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <path d="M3 9h18"/>
+                                <path d="M9 21V9"/>
+                            </svg>
+                        </div>
+                        <div class="earnings-content">
+                            <h3>Earnings Supplement (XLS)</h3>
+                            <p>Downloadable spreadsheet with raw data</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="earnings-item">
+                        <div class="earnings-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                            </svg>
+                        </div>
+                        <div class="earnings-content">
+                            <h3>Earnings Transcript</h3>
+                            <p>Full text of earnings call discussion</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="earnings-item">
+                        <div class="earnings-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="earnings-content">
+                            <h3>Conference Call</h3>
+                            <p>Live earnings call audio and replay</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Investor Day Section -->
+            <section id="investor-day" class="section">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">
+                        Investor 
+                        <span class="section-title-accent">Day 2025</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Join us for our annual investor day featuring strategic updates, 
+                        management presentations, and exclusive insights into our growth trajectory.
+                    </p>
+                </div>
+
+                <div class="glassmorphism-card fade-in" style="max-width: 800px; margin: 0 auto;">
+                    <div class="card-content" style="text-align: center; padding: 3rem 2rem;">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; background: rgba(0, 166, 81, 0.2); color: #00cc66; font-size: 0.875rem; font-weight: 500; margin-bottom: 2rem;">
+                            Upcoming Event
+                        </div>
+                        <h3 style="font-size: 2rem; font-weight: 700; color: white; margin-bottom: 1rem;">March 15, 2025</h3>
+                        <p style="font-size: 1.125rem; color: #d1d5db; margin-bottom: 2rem; line-height: 1.6;">
+                            Experience our comprehensive strategy presentation covering digital transformation, 
+                            ESG initiatives, and market expansion plans for the coming years.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                            <button class="btn-primary">
+                                Register Now
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                            <a href="#" style="color: #00a651; text-decoration: none; font-weight: 500;">View 2024 Presentations</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Signup -->
+            <section id="newsletter" class="section">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">
+                        Investor News & 
+                        <span class="section-title-accent">Alerts</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Stay ahead with timely updates on financial results, strategic announcements, 
+                        and market developments delivered directly to your inbox.
+                    </p>
+                </div>
+
+                <div class="glassmorphism-card fade-in" style="max-width: 600px; margin: 0 auto;">
+                    <div class="card-content" style="text-align: center; padding: 3rem 2rem;">
+                        <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email address"
+                                    style="padding: 1rem 1.5rem; border-radius: 0.75rem; background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(0, 166, 81, 0.3); color: white; font-size: 1rem;"
+                                    required
+                                >
+                                <select style="padding: 1rem 1.5rem; border-radius: 0.75rem; background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(0, 166, 81, 0.3); color: white; font-size: 1rem;">
+                                    <option value="">Select notification preferences</option>
+                                    <option value="all">All Updates</option>
+                                    <option value="earnings">Earnings Only</option>
+                                    <option value="major">Major Announcements</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                Subscribe to Updates
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <p style="font-size: 0.875rem; color: #94a3b8; margin-top: 1rem;">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Footer Logo Watermark -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='%2300a651' stroke-width='4' opacity='0.3'/%3E%3Cpath d='M100 40 L140 80 L120 80 L120 120 L80 120 L80 80 L60 80 Z' fill='%2300a651' opacity='0.4'/%3E%3Cpath d='M70 130 Q100 150 130 130' stroke='%2300a651' stroke-width='3' fill='none' opacity='0.3'/%3E%3C/svg%3E" alt="Bank Logo" class="footer-watermark">
+            
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3>Investor Relations</h3>
+                        <ul>
+                            <li><a href="#quarterly-earnings">Quarterly Earnings</a></li>
+                            <li><a href="#annual-reports">Annual Reports</a></li>
+                            <li><a href="#shareholder-info">Shareholder Info</a></li>
+                            <li><a href="#esg-info">ESG Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Financial Information</h3>
+                        <ul>
+                            <li><a href="#sfc-filings">SFC Filings</a></li>
+                            <li><a href="#fixed-income">Fixed Income</a></li>
+                            <li><a href="#press-releases">Press Releases</a></li>
+                            <li><a href="#events-presentations">Presentations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#investor-day">Investor Day</a></li>
+                            <li><a href="#newsletter">Email Alerts</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact IR</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Corporate</h3>
+                        <ul>
+                            <li><a href="#">About TDB</a></li>
+                            <li><a href="#">Leadership</a></li>
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Trade & Development Bank. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation scroll effect
+            const navigation = document.getElementById('navigation');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 20) {
+                    navigation.classList.add('scrolled');
+                } else {
+                    navigation.classList.remove('scrolled');
+                }
+            });
+
+            // Active navigation
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all items
+                    navItems.forEach(navItem => navItem.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Smooth scroll to section
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            // Form submission
+            const newsletterForm = document.querySelector('form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for subscribing to our investor updates!');
+                });
+            }
+
+            // Smooth scrolling for all internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Initialize animations
+            setTimeout(function() {
+                document.querySelectorAll('.fade-in').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 300);
+        });
+
+        // Add dynamic leaf patterns
+        function createDynamicLeaves() {
+            const ecoPatterns = document.querySelector('.eco-patterns');
+            for (let i = 15; i < 25; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'leaf-pattern';
+                leaf.style.top = Math.random() * 100 + '%';
+                leaf.style.left = Math.random() * 100 + '%';
+                leaf.style.animationDelay = Math.random() * 25 + 's';
+                leaf.style.animationDuration = (20 + Math.random() * 15) + 's';
+                ecoPatterns.appendChild(leaf);
+            }
+        }
+
+        // Initialize dynamic elements
+        createDynamicLeaves();
+    </script>
+</body>
+</html>
